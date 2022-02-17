@@ -13,44 +13,42 @@ img {
   display: none;
 }
 
-@media (max-width: 800px) {
-  .toggle-btn {
-    background: transparent;
-    border: none;
-    display: block;
-    width: 70px;
-    height: 80px;
-    padding: 0.25rem;
-    cursor: pointer;
-    font-size: 3rem;
-  }
+.toggle-btn {
+  background: transparent;
+  border: none;
+  display: block;
+  width: 70px;
+  height: 80px;
+  padding: 0.25rem;
+  cursor: pointer;
+  font-size: 3rem;
+}
 
-  nav {
-    display: none;
-  }
+nav {
+  display: none;
+}
 
-  nav.shown {
-    border-top: 1px solid #000;
-    padding-top: 1rem;
-    display: flex;
-    flex: 1 1 100%;
-    flex-flow: column;
-  }
+nav.shown {
+  border-top: 1px solid #000;
+  padding-top: 1rem;
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: column;
+}
 
-  nav ul {
-    display: flex;
-    flex-flow: column;
-  }
+nav ul {
+  display: flex;
+  flex-flow: column;
+}
 
-  .toggle-btn.open .burger,
-  .close {
-    display: none;
-  }
+.toggle-btn.open .burger,
+.close {
+  display: none;
+}
 
-  .toggle-btn.open .close,
-  .burger {
-    display: block;
-  }
+.toggle-btn.open .close,
+.burger {
+  display: block;
 }
 
 header ul {
