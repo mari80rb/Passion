@@ -60,7 +60,7 @@ async function hentdata() {
 
 
 function vis(){
-  console.log("Filter", filter)
+  console.log("Planter", planter)
   const container = document.querySelector("section");
   const temp = document.querySelector("template");
   container.textContent = ""; // Ryd container inden ny loop
@@ -69,7 +69,7 @@ function vis(){
   
   planter.forEach((plante) => {
     console.log("kategori", plante.type)
-    if (filter == plante.type || filter == "alle"){
+    if (filter == plante.type || filter == "alle" || filter == plante.størrelse || filter == plante.sværhedsgrad){
 
       const klon = temp.cloneNode(true).content;
       klon.querySelector("h2").textContent = plante.navn;
