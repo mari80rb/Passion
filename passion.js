@@ -23,25 +23,56 @@ btn.addEventListener("click", toggleMenu);
 
 /******************* BURGERMENU SLUT ******************/
 
-//const url = "https://tema7-64ef.restdb.io/rest/planter";
-//const urlParams = new URLSearchParams(window.location.search);
-//const id = urlParams.get("id");
-let plante;
+const url = "https://tema7-64ef.restdb.io/rest/planter"
+const key = "61fcfa4d3f215f310a37be8a"
+let planter;
 
-const myHeaders = {
-  "x-apikey": "61fcfa4d3f215f310a37be8a",
+const options= {
+  headers: {
+      "x-apikey": key,
+  },
 };
 
-document.addEventListener("DOMContentLoaded", loadJSON);
-//console.log("ID", id);
-
-async function loadJSON() {
-  const JSONData = await fetch(`https://tema7-64ef.restdb.io/rest/planter`, {
-    headers: myHeaders,
-  });
-
-  plante = await JSONData.json();
-
-  console.log("Planter", plante);
-  //visPlante(plante);
+document.addEventListener("DOMContentLoaded", start);
+let filter = "alle";
+//første funktion der kaldes efter dom er loaded
+function start(){
+  const filterKnapper = document.querySelectorAll("nav button");
+  filterKnapper.forEach(knap => knap.addEventListener("click", filtrerPlanter));
+  hentdata();
 }
+
+async function hentdata() {
+  const respons = await fetch(url, options);
+  planter = await respons.json();
+  vis();
+}
+
+function vis(){
+  console.log("planter", planter)
+  const container = document.querySelector("section");
+  const temp = document.querySelector("template");
+  container.textContent = ""; // Ryd container inden ny loop
+
+
+  
+  planter.forEach((plante) => {
+    if (filter == plante.kategori || filter == "alle"){
+
+      const klon = temp.cloneNode(true).content;
+      klon.querySelector("h2").textContent = plante.navn;
+      klon.querySelector(".kortbeskrivelse").textContent = plante.kortbeskrivelse;
+      klon.querySelector(".pris").textContent = `Pris: ${plante.pris}` + ".-";
+      
+      //klon.querySelector("img").src = "medium/" + plante.billednavn + "-md.jpg";
+      //klon.querySelector("img").addEventListener("click", () => visDetaljer(plante));
+
+      container.appendChild(klon);
+
+    }
+
+  });
+  
+}
+hentdata();
+
