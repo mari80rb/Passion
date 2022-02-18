@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "billeder",
+		"path": "..\\billeder"
+	},
+	{
+		"name": "Passion",
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Passion"
+  }
+}
