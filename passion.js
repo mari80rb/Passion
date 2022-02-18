@@ -26,6 +26,7 @@ btn.addEventListener("click", toggleMenu);
 const url = "https://tema7-64ef.restdb.io/rest/planter"
 const key = "61fcfa4d3f215f310a37be8a"
 let planter;
+const header = document.querySelector(".kategori")
 
 const options= {
   headers: {
@@ -57,8 +58,9 @@ async function hentdata() {
   vis();
 }
 
+
 function vis(){
-  console.log("planter", planter)
+  console.log("Planter", planter)
   const container = document.querySelector("section");
   const temp = document.querySelector("template");
   container.textContent = ""; // Ryd container inden ny loop
@@ -66,14 +68,15 @@ function vis(){
 
   
   planter.forEach((plante) => {
-    if (filter == plante.kategori || filter == "alle"){
+    console.log("kategori", plante.type)
+    if (filter == plante.type || filter == "alle" || filter == plante.størrelse || filter == plante.sværhedsgrad){
 
       const klon = temp.cloneNode(true).content;
       klon.querySelector("h2").textContent = plante.navn;
       
       
       
-      klon.querySelector("img").src = "billeder/" + plante.billed;
+      klon.querySelector("img").src = "billeder/" + plante.billede;
       //klon.querySelector("img").addEventListener("click", () => visDetaljer(plante));
 
       container.appendChild(klon);
