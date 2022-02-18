@@ -65,14 +65,14 @@
 
 
 
-    <script src="passion.js">
+    <script>
 
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
 
         
-        const url = "https://tema7-64ef.restdb.io/rest/planter";
-        let planter;
+        const url = "https://tema7-64ef.restdb.io/rest/planter/";
+        let plante;
         
         const myHeaders = {
             "x-apikey": "61fcfa4d3f215f310a37be8a"
@@ -82,22 +82,22 @@
         document.addEventListener("DOMContentLoaded", loadJSON);
 
         async function loadJSON(){
-            const JSONData = await fetch (`https://tema7-64ef.restdb.io/rest/planter${id}`, {
+            document.querySelector("button").addEventListener("click", tilbageTilPersonGalleri);
+            const JSONData = await fetch (url+id, {
                 headers: myHeaders
                 
             });
 
-            planter = await JSONData.json();
+            plante = await JSONData.json();
 
-            console.log("Personer", planter);
-            visPerson(planter);
+            console.log(plante);
+            visPlante();
         }
 
-        function visPerson(){
-            document.querySelector("h2").textContent = person.navn ;
+        function visPlante(){
+            document.querySelector("h2").textContent = plante.navn ;
 
-            document.querySelector("img").src = "billeder/" + plante.billede;
-            document.querySelector("button").addEventListener("click", tilbageTilPersonGalleri);
+            document.querySelector(".plante img").src = "billeder/" + plante.billede;
         }
 
         function tilbageTilPersonGalleri (){
