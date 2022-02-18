@@ -7,6 +7,10 @@ img {
   max-width: 100%;
 }
 
+main {
+  margin-inline: 12%;
+}
+
 /******** SKRIFT ********/
 h1 {
   font-family: "Rowdies", cursive;
@@ -22,6 +26,7 @@ p {
 
 ul {
   font-family: "Dosis", sans-serif;
+  text-decoration: none;
 }
 
 button {
@@ -63,6 +68,16 @@ nav ul {
   flex-flow: column;
 }
 
+a {
+  text-decoration: none;
+  color: #8c4949;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #552525;
+}
+
 .toggle-btn.open .burger,
 .close {
   display: none;
@@ -75,6 +90,7 @@ nav ul {
 
 header ul {
   list-style: none;
+  text-decoration: none;
 }
 
 button {
@@ -130,6 +146,11 @@ button:hover {
     justify-content: space-between;
     margin-inline: 20%;
     margin-inline-end: 30%;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
   }
 }
 
