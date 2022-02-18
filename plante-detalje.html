@@ -48,6 +48,12 @@
 
     <main>
 
+        <article class="plante">
+            <h2></h2>
+            <img src="" alt="" />
+            <p class="beskrivelse"></p>
+        </article>
+
     </main>
 
 
@@ -60,12 +66,48 @@
 
 
 
-    <script src="passion.js">
+    <script>
 
-        //const url = "https://tema7-64ef.restdb.io/rest/planter";
-        //const urlParams = new URLSearchParams(window.location.search);
-        //const id = urlParams.get("id");
-        //console.log("ID", id);
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        
+        const url = "https://tema7-64ef.restdb.io/rest/planter/";
+        let plante;
+        
+        const myHeaders = {
+            "x-apikey": "61fcfa4d3f215f310a37be8a"
+        }
+        console.log("ID", id);
+
+        document.addEventListener("DOMContentLoaded", loadJSON);
+
+        async function loadJSON(){
+            document.querySelector("button").addEventListener("click", tilbageTilGalleri);
+            const JSONData = await fetch (url+id, {
+                headers: myHeaders
+                
+            });
+
+            plante = await JSONData.json();
+
+            console.log(plante);
+            visPlante();
+        }
+
+        function visPlante(){
+            document.querySelector("h2").textContent = plante.navn ;
+
+            document.querySelector(".plante img").src = "billeder/" + plante.billede;
+            document.querySelector(".beskrivelse").textContent = plante.beskrivelse;
+        }
+
+        function tilbageTilGalleri (){
+            history.back();
+        }
+
+
+
     </script>
     
 </body>
