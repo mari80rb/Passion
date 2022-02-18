@@ -23,26 +23,25 @@ btn.addEventListener("click", toggleMenu);
 
 /******************* BURGERMENU SLUT ******************/
 
-const url = "https://tema7-64ef.restdb.io/rest/planter";
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id");
+//const url = "https://tema7-64ef.restdb.io/rest/planter";
+//const urlParams = new URLSearchParams(window.location.search);
+//const id = urlParams.get("id");
 let plante;
 
 const myHeaders = {
-  "x-apikey": "600ec2fb1346a1524ff12de4"
-}
+  "x-apikey": "61fcfa4d3f215f310a37be8a",
+};
 
 document.addEventListener("DOMContentLoaded", loadJSON);
-console.log("ID", id)
+//console.log("ID", id);
 
-async function loadJSON(){
-    const JSONData = await fetch (`https://tema7-64ef.restdb.io/rest/planter/${id}`, {
-        headers: myHeaders
-        
-    });
+async function loadJSON() {
+  const JSONData = await fetch(`https://tema7-64ef.restdb.io/rest/planter`, {
+    headers: myHeaders,
+  });
 
-    plante = await JSONData.json();
+  plante = await JSONData.json();
 
-    console.log("Planter", plante);
-    visPlante(plante);
+  console.log("Planter", plante);
+  //visPlante(plante);
 }
