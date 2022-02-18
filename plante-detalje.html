@@ -51,6 +51,7 @@
         <article class="plante">
             <h2></h2>
             <img src="" alt="" />
+            <p class="beskrivelse"></p>
         </article>
 
     </main>
@@ -82,7 +83,7 @@
         document.addEventListener("DOMContentLoaded", loadJSON);
 
         async function loadJSON(){
-            document.querySelector("button").addEventListener("click", tilbageTilPersonGalleri);
+            document.querySelector("button").addEventListener("click", tilbageTilGalleri);
             const JSONData = await fetch (url+id, {
                 headers: myHeaders
                 
@@ -98,9 +99,10 @@
             document.querySelector("h2").textContent = plante.navn ;
 
             document.querySelector(".plante img").src = "billeder/" + plante.billede;
+            document.querySelector(".beskrivelse").textContent = plante.beskrivelse;
         }
 
-        function tilbageTilPersonGalleri (){
+        function tilbageTilGalleri (){
             history.back();
         }
 
