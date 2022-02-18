@@ -59,6 +59,7 @@ nav.shown {
 
 nav ul {
   display: flex;
+
   flex-flow: column;
 }
 
@@ -78,14 +79,14 @@ header ul {
 
 /************ BURGER MENU SLUT *********************/
 
-/************ KNAPPER START *********************/
-button {
+/************ KATEGORIER START *********************/
+.kategorier button {
   font-size: 1rem;
   background-color: white;
-  margin: 0.2%;
-  margin-top: 2%;
+  margin: 0.1%;
+  margin-top: 1%;
   color: #8c4949;
-  border: 3px solid #8c4949;
+  border: 2px solid #8c4949;
   padding: 2%;
   padding-block: 0.75%;
   cursor: pointer;
@@ -93,8 +94,8 @@ button {
   transition-duration: 0.3s;
 }
 
-button:hover {
-  border: 3px solid #8c4949;
+.kategorier button:hover {
+  border: 2px solid #8c4949;
   background-color: #8c4949;
   color: white;
 }
@@ -105,4 +106,13 @@ button:hover {
 
 .valgt {
   background-color: aqua;
+}
+/************ KATEGORIER SLUT *********************/
+
+@media (min-width: 700px) {
+  nav ul {
+    justify-content: space-between;
+    margin-inline: 20%;
+    margin-inline-end: 30%;
+  }
 }
