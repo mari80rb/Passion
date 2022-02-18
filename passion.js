@@ -42,6 +42,15 @@ function start(){
   hentdata();
 }
 
+//eventlistener knyttet til knapperne der vælger hvad for et filter der er aktivt
+function filtrerPlanter(){
+  filter = this.dataset.kategori; //Sæt variabel "filter" til værdien af data-kategori på den knap der er klikket på
+  document.querySelector(".valgt").classList.remove("valgt") //fjern klassen valgt på den knap
+  this.classList.add("valgt") //marker den knap der klikket på 
+  vis(); // Kald funktionen vis() efter det nye filter er sat
+  header.textContent = this.textContent;
+}
+
 async function hentdata() {
   const respons = await fetch(url, options);
   planter = await respons.json();
@@ -61,10 +70,10 @@ function vis(){
 
       const klon = temp.cloneNode(true).content;
       klon.querySelector("h2").textContent = plante.navn;
-      klon.querySelector(".kortbeskrivelse").textContent = plante.kortbeskrivelse;
-      klon.querySelector(".pris").textContent = `Pris: ${plante.pris}` + ".-";
       
-      //klon.querySelector("img").src = "medium/" + plante.billednavn + "-md.jpg";
+      
+      
+      klon.querySelector("img").src = "billeder/" + plante.billed;
       //klon.querySelector("img").addEventListener("click", () => visDetaljer(plante));
 
       container.appendChild(klon);
