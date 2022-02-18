@@ -77,7 +77,7 @@ function vis(){
       
       
       klon.querySelector("img").src = "billeder/" + plante.billede;
-      //klon.querySelector("img").addEventListener("click", () => visDetaljer(plante));
+      klon.querySelector("img").addEventListener("click", () => visDetaljer(plante));
 
       container.appendChild(klon);
 
@@ -86,5 +86,10 @@ function vis(){
   });
   
 }
+
+function visDetaljer (hvad) {
+  location.href = `plante-detalje.html?id=${hvad._id}`;
+}
+
 hentdata();
 

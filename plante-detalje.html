@@ -48,6 +48,11 @@
 
     <main>
 
+        <article class="plante">
+            <h2></h2>
+            <img src="" alt="" />
+        </article>
+
     </main>
 
 
@@ -62,10 +67,45 @@
 
     <script src="passion.js">
 
-        //const url = "https://tema7-64ef.restdb.io/rest/planter";
-        //const urlParams = new URLSearchParams(window.location.search);
-        //const id = urlParams.get("id");
-        //console.log("ID", id);
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        
+        const url = "https://tema7-64ef.restdb.io/rest/planter";
+        let planter;
+        
+        const myHeaders = {
+            "x-apikey": "61fcfa4d3f215f310a37be8a"
+        }
+        console.log("ID", id);
+
+        document.addEventListener("DOMContentLoaded", loadJSON);
+
+        async function loadJSON(){
+            const JSONData = await fetch (`https://tema7-64ef.restdb.io/rest/planter${id}`, {
+                headers: myHeaders
+                
+            });
+
+            planter = await JSONData.json();
+
+            console.log("Personer", planter);
+            visPerson(planter);
+        }
+
+        function visPerson(){
+            document.querySelector("h2").textContent = person.navn ;
+
+            document.querySelector("img").src = "billeder/" + plante.billede;
+            document.querySelector("button").addEventListener("click", tilbageTilPersonGalleri);
+        }
+
+        function tilbageTilPersonGalleri (){
+            history.back();
+        }
+
+
+
     </script>
     
 </body>
