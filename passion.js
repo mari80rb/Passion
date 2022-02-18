@@ -22,3 +22,7 @@ function toggleMenu() {
 btn.addEventListener("click", toggleMenu);
 
 /******************* BURGERMENU SLUT ******************/
+
+const url = "https://tema7-64ef.restdb.io/rest/planter";
+const key = "600ec2fb1346a1524ff12de4";
+let data = [];
