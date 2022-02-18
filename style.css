@@ -6,6 +6,27 @@ html {
 img {
   max-width: 100%;
 }
+/******** SKRIFT ********/
+h1 {
+  font-family: "Rowdies", cursive;
+}
+h2,
+h3 {
+  font-family: "Dosis", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  font-family: "Dosis", sans-serif;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
 
 /************* BURGER MENU ********************/
 
@@ -65,8 +86,8 @@ button {
   margin-top: 2%;
   color: #8c4949;
   border: 3px solid #8c4949;
-  padding: 3%;
-  padding-block: 1%;
+  padding: 2%;
+  padding-block: 0.75%;
   cursor: pointer;
   border-radius: 10px;
   transition-duration: 0.3s;
@@ -76,4 +97,12 @@ button:hover {
   border: 3px solid #8c4949;
   background-color: #8c4949;
   color: white;
+}
+
+.kategorier {
+  text-align: center;
+}
+
+.valgt {
+  background-color: aqua;
 }
