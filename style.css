@@ -163,9 +163,15 @@ section {
 }
 /********** GRID SLUT **********/
 
-.hjem {
+.logo {
   width: 12%;
   aspect-ratio: 1046/847;
-  background-image: url(billeder/plante_logo.svg);
   background-size: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.linje {
+  display: inline;
 }
