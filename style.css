@@ -205,7 +205,7 @@ h1 {
 @media (min-width: 900px) {
   .test {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
   }
 }
