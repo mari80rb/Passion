@@ -1,0 +1,53 @@
+.logo {
+  width: 10%;
+  aspect-ratio: 1046/847;
+  background-size: cover;
+}
+
+.navn {
+  color: #8c4949;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.navbar ul {
+  display: flex;
+  flex-flow: column;
+}
+
+/*.navbar button {
+  float: left;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navbar li .pot {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem
+  ;
+}
+
+.navbar .logo {
+  float: right;
+  margin-top: auto;
+  margin-bottom: auto;
+}*/
+
+/*
+.navbar ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.navbar li {
+  display: flex;
+
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+*/
