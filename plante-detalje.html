@@ -48,6 +48,8 @@
 
     <main>
 
+        <button class="tilbage">←</button>
+
         <article class="plante">
             <h2></h2>
             <img src="" alt="" />
@@ -68,6 +70,8 @@
 
     <script>
 
+        //Øverst her i dokumentet hentes alle URL-parametrene ud (vi har kun et), og ved hjælp af get(“id”) hente vores enlige parameter ud, der jo hedder id. 
+        //Det sætter vi så lig med en const vi kalder id, og på den måde har vi fået overført parameteret fra url-strengen og over i en variabel vi kan bruge i vores script
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
 
@@ -82,9 +86,12 @@
 
         document.addEventListener("DOMContentLoaded", loadJSON);
 
+        //første funktion kaldes efter loadsJSON
         async function loadJSON(){
-            document.querySelector("button").addEventListener("click", tilbageTilGalleri);
-            const JSONData = await fetch (url+id, {
+            //lav eventlistener der fører tilbage til galleri med click. 
+            document.querySelector(".tilbage").addEventListener("click", tilbageTilGalleri);
+            //sæt id'et ind som vi har hentet fra url-parametrene ind i vores kald til restdb, og derved modtage kun én plante. 
+            const JSONData = await fetch (url+id,{
                 headers: myHeaders
                 
             });
@@ -95,6 +102,7 @@
             visPlante();
         }
 
+        //da vi kun får en plante, hentes den og overføre det content til vores html. Ikke noget med at loope.
         function visPlante(){
             document.querySelector("h2").textContent = plante.navn ;
 
@@ -102,9 +110,10 @@
             document.querySelector(".beskrivelse").textContent = plante.beskrivelse;
         }
 
+        //
         function tilbageTilGalleri (){
-            history.back();
-        }
+            history.back(); //brug history web API’et til at komme et hak baglæns i browserhistorien og dermed komme tilbage til planter.html
+        };
 
 
 

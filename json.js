@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", start);
 let filter = "alle";
 //første funktion der kaldes efter dom er loaded
 function start(){
-  const filterKnapper = document.querySelectorAll("nav button");
-  filterKnapper.forEach(knap => knap.addEventListener("click", filtrerPlanter));
-  hentdata();
+  const filterKnapper = document.querySelectorAll("nav button"); //Vi laver en variabel der indeholder "nav button" fra dom
+  filterKnapper.forEach(knap => knap.addEventListener("click", filtrerPlanter)); //vi bruger forEach metoden for at gentage funktionen for hvert element, og i dette tilfælde er det en click funktion 
+  hentdata();//kald så async function hvor vi henter alt data
 }
 
 //eventlistener knyttet til knapperne der vælger hvad for et filter der er aktivt
@@ -54,32 +54,37 @@ function filtrerPlanter(){
 }
 
 async function hentdata() {
-  const respons = await fetch(url, options);
-  planter = await respons.json();
-  vis();
+  const respons = await fetch(url, options);//Lav variabel "respons" hvor der await fetches, (starter/venter på en request som returner et promise), hvor vi i dette tilfælde venter på vores url const og options const
+  planter = await respons.json();//variablen "planter" sættes lig med respons consten som vi awaiter, så den henter alt json fra databasen
+  vis();//Kald derefter funktionen vis()
 }
 
 
 function vis(){
-  console.log("Planter", planter)
+  console.log("Planter", planter)//vis nu "planter" i konsollen
   const container = document.querySelector("section");
   const temp = document.querySelector("template");
   container.textContent = ""; // Ryd container inden ny loop
 
 
-
+    //vi looper planter og gentager funktion for hvert element
   planter.forEach((plante) => {
-    console.log("kategori", plante.type)
+    console.log("kategori", plante.type) 
+    //Lav if statement, filtrer efter plante.type, ellers alle, ellers, størrelse, ellers sværhedsgrad. 
     if (filter == plante.type || filter == "alle" || filter == plante.størrelse || filter == plante.sværhedsgrad){
-
-      const klon = temp.cloneNode(true).content;
+    
+        
+      const klon = temp.cloneNode(true).content; //lav en const der hedder klon, hvor vi kloner det content der er i "temp"
+      //Dernæst sætter vi vores indhold ind i de forskellige ting, såsom overskrifter og billeder, der står tomt i "temp"
      klon.querySelector("h2").textContent = plante.navn;
 
 
 
       klon.querySelector("img").src = "billeder/" + plante.billede;
+      //for hver img, laves der en click eventlistener
       klon.querySelector("img").addEventListener("click", () => visDetaljer(plante));
 
+      //Vi bruger appendChild til at sætte vores klon ind i "container"
       container.appendChild(klon);
 
     }
@@ -88,8 +93,12 @@ function vis(){
 
 }
 
+//Vi laver function som viser detaljer fra det element (img) man har klikket på, i en ny side.
 function visDetaljer (hvad) {
-  location.href = `plante-detalje.html?id=${hvad._id}`;
+
+    //location.href bruges til at vise ny html side når man klikker på "img". Her bruger vi "id" fra databasen. Man ser dermed "id" oppe i URL'en.
+  location.href = `plante-detalje.html?id=${hvad._id}`; 
+
 }
 
 hentdata();
