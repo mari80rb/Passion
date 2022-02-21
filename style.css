@@ -152,31 +152,14 @@ button:hover {
 }
 /********** GRID SLUT **********/
 
-.logo {
-  width: 15%;
-  aspect-ratio: 1046/847;
-  background-size: cover;
-}
-
-.navn {
-  color: #8c4949;
-}
-
-.linje {
-  display: flex;
-  flex-flow: wrap;
-  align-items: center;
-}
-
 section {
   display: grid;
 }
 
-.splashimage , h1 {
-grid-area: 1 / 1;
+.splashimage,
+h1 {
+  grid-area: 1 / 1;
 }
-
-
 
 .splashimage {
   object-fit: cover;
