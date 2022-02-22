@@ -196,6 +196,10 @@ footer .content {
 /* Farve og størrelse på indhold/p i footer*/
 footer .content p,
 a {
-  color: black;
+  color: white;
   font-size: 12px;
+}
+
+.topic {
+  color: white;
 }
