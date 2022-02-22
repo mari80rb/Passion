@@ -181,6 +181,7 @@ button:hover {
 footer {
   width: 100%;
   background: #bf8484;
+  ;
 }
 
 footer .content {
@@ -191,7 +192,7 @@ footer .content {
   flex-wrap: wrap;
 }
 
-footer .content p,
+footer .content p, .topic,
 footer a {
   color: white;
   font-size: 12px;
