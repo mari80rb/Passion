@@ -33,6 +33,7 @@
         border: 2px solid #8c4949;
         padding: 2%;
         padding-block: 0.75%;
+        padding-inline: 5%;
         cursor: pointer;
         border-radius: 20px;
         transition-duration: 0.3s;
@@ -48,6 +49,9 @@
           display: grid;
           grid-template-columns: 5fr 4fr;
           gap: 5%;
+        }
+        .tilbage {
+          padding-inline: 3%;
         }
       }
     </style>
@@ -99,7 +103,14 @@
       </article>
     </main>
 
-    <footer></footer>
+     <footer>
+        <div class="content">
+        <p>Kontakt os på <br> <br>
+            Mobil: 0045 22 22 22 22 <br>
+            Mail: passion@pot-it.dk
+        </p>
+        </div>
+    </footer>
 
     <script>
       //Øverst her i dokumentet hentes alle URL-parametrene ud (vi har kun et), og ved hjælp af get(“id”) hente vores enlige parameter ud, der jo hedder id.
@@ -148,5 +159,6 @@
         history.back(); //brug history web API’et til at komme et hak baglæns i browserhistorien og dermed komme tilbage til planter.html
       }
     </script>
+    <script src="passion.js"></script>
   </body>
 </html>
