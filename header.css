@@ -1,11 +1,17 @@
 .logo {
-  width: 30%;
+  width: 60%;
   aspect-ratio: 1046/847;
   background-size: cover;
 }
 
 .navbar ul {
   display: flex;
+}
+
+@media (min-width: 900px) {
+  .logo {
+    width: 30%;
+  }
 }
 
 /*.navbar button {
