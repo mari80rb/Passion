@@ -160,7 +160,7 @@ button:hover {
   }
   /******* FORSIDE CSS ********/
 
-  /* infotekst og billede af mand der vander planter*/
+  /* Placering af infotekst og img på forsiden*/
   .info {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -180,7 +180,7 @@ button:hover {
   margin-bottom: 70px;
 }
 
-/* Footer */
+/**************** Footer ***************/
 footer {
   width: 100%;
   background: #bf8484;
