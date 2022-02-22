@@ -8,14 +8,8 @@
   color: #8c4949;
 }
 
-.menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .navbar ul {
   display: flex;
-  flex-flow: column;
 }
 
 /*.navbar button {
