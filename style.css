@@ -179,7 +179,6 @@ button:hover {
 footer {
   width: 100%;
   background: #bf8484;
-  ;
 }
 
 footer .content {
@@ -190,8 +189,52 @@ footer .content {
   flex-wrap: wrap;
 }
 
-footer .content p, .topic,
+footer .content p,
+.topic,
 footer a {
   color: white;
   font-size: 12px;
+}
+
+/*********** " FIND DIN PLANTE HER " splash billede samt overskrift ***********/
+.container {
+  display: grid;
+}
+
+.splash2,
+h1 {
+  grid-area: 1 / 1;
+}
+
+.splash2 {
+  object-fit: cover;
+}
+
+h1 {
+  color: white;
+  place-self: center center;
+  color: #d9b384;
+  font-family: "Rowdies", cursive;
+  font-size: 80px;
+}
+
+/*************** MOBIL *************/
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+/*************** TABLET *************/
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+/************** WEB *****************/
+@media only screen and (min-width: 990px) {
+    h1 {
+        font-size: 80px;
+    }
 }
