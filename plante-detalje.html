@@ -1,145 +1,143 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&family=Poppins:wght@300&family=Zen+Kaku+Gothic+Antique&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header.css" />
+
     <title>Planter</title>
 
     <style>
-        button {
-            font-size: 1rem;
-            background-color: white;
-            margin: 0.1%;
-            margin-top: 1%;
-            color: #8c4949;
-            border: 2px solid #8c4949;
-            padding: 2%;
-            padding-block: 0.75%;
-            cursor: pointer;
-            border-radius: 20px;
-            transition-duration: 0.3s;
-        }
+      button {
+        font-size: 1rem;
+        background-color: white;
+        margin: 0.1%;
+        margin-top: 1%;
+        color: #8c4949;
+        border: 2px solid #8c4949;
+        padding: 2%;
+        padding-block: 0.75%;
+        cursor: pointer;
+        border-radius: 20px;
+        transition-duration: 0.3s;
+      }
 
-        button:hover {
-            border: 2px solid #8c4949;
-            background-color: #8c4949;
-            color: white;
-        }
+      button:hover {
+        border: 2px solid #8c4949;
+        background-color: #8c4949;
+        color: white;
+      }
     </style>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-
-        <div class="hjem">
-            
+      <div class="navbar">
+        <ul id="menu">
+          <li><button class="toggle-btn">☰</button></li>
+          <li><a href="index.html" class="pot"> POT-it </a></li>
+          <li>
             <a href="index.html">
-                <img src="" alt="" class="logo">
+              <img
+                src="billeder/plante_logo.svg"
+                alt="logo med tre potteplanter"
+                class="logo"
+              />
             </a>
+          </li>
+        </ul>
+      </div>
 
-        </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="info.html">Info</a>
+          </li>
 
-        <button class="toggle-btn">☰</button>
+          <li>
+            <a href="planter.html">Planter</a>
+          </li>
 
-        <nav>
-            <ul>
-    
-                <li>
-                    
-                    <a href="info.html">Info</a>
-                
-                </li>
-    
-                <li>
-                    <a href="planter.html">Planter</a> 
-                </li>
-    
-                <li>
-                    <a href="om.html">Om os</a>
-                </li>
-    
-            </ul>
-        </nav>
-
-
+          <li>
+            <a href="om.html">Om os</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <button class="tilbage">←</button>
 
-        <button class="tilbage">←</button>
-
-        <article class="plante">
-            <h2></h2>
-            <img src="" alt="" />
-            <p class="beskrivelse"></p>
-        </article>
-
+      <article class="plante">
+        <h2></h2>
+        <img src="" alt="" />
+        <p class="beskrivelse"></p>
+      </article>
     </main>
 
-
-
-
-
-    <footer>
-
-    </footer>
-
-
+    <footer></footer>
 
     <script>
+      //Øverst her i dokumentet hentes alle URL-parametrene ud (vi har kun et), og ved hjælp af get(“id”) hente vores enlige parameter ud, der jo hedder id.
+      //Det sætter vi så lig med en const vi kalder id, og på den måde har vi fået overført parameteret fra url-strengen og over i en variabel vi kan bruge i vores script
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
 
-        //Øverst her i dokumentet hentes alle URL-parametrene ud (vi har kun et), og ved hjælp af get(“id”) hente vores enlige parameter ud, der jo hedder id. 
-        //Det sætter vi så lig med en const vi kalder id, og på den måde har vi fået overført parameteret fra url-strengen og over i en variabel vi kan bruge i vores script
-        const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get("id");
+      const url = "https://tema7-64ef.restdb.io/rest/planter/";
+      let plante;
 
-        
-        const url = "https://tema7-64ef.restdb.io/rest/planter/";
-        let plante;
-        
-        const myHeaders = {
-            "x-apikey": "61fcfa4d3f215f310a37be8a"
-        }
-        console.log("ID", id);
+      const myHeaders = {
+        "x-apikey": "61fcfa4d3f215f310a37be8a",
+      };
+      console.log("ID", id);
 
-        document.addEventListener("DOMContentLoaded", loadJSON);
+      document.addEventListener("DOMContentLoaded", loadJSON);
 
-        //første funktion kaldes efter loadsJSON
-        async function loadJSON(){
-            //lav eventlistener der fører tilbage til galleri med click. 
-            document.querySelector(".tilbage").addEventListener("click", tilbageTilGalleri);
-            //sæt id'et ind som vi har hentet fra url-parametrene ind i vores kald til restdb, og derved modtage kun én plante. 
-            const JSONData = await fetch (url+id,{
-                headers: myHeaders
-                
-            });
+      //første funktion kaldes efter loadsJSON
+      async function loadJSON() {
+        //lav eventlistener der fører tilbage til galleri med click.
+        document
+          .querySelector(".tilbage")
+          .addEventListener("click", tilbageTilGalleri);
+        //sæt id'et ind som vi har hentet fra url-parametrene ind i vores kald til restdb, og derved modtage kun én plante.
+        const JSONData = await fetch(url + id, {
+          headers: myHeaders,
+        });
 
-            plante = await JSONData.json();
+        plante = await JSONData.json();
 
-            console.log(plante);
-            visPlante();
-        }
+        console.log(plante);
+        visPlante();
+      }
 
-        //da vi kun får en plante, hentes den og overføre det content til vores html. Ikke noget med at loope.
-        function visPlante(){
-            document.querySelector("h2").textContent = plante.navn ;
+      //da vi kun får en plante, hentes den og overføre det content til vores html. Ikke noget med at loope.
+      function visPlante() {
+        document.querySelector("h2").textContent = plante.navn;
 
-            document.querySelector(".plante img").src = "billeder/" + plante.billede;
-            document.querySelector(".beskrivelse").textContent = plante.beskrivelse;
-        }
+        document.querySelector(".plante img").src =
+          "billeder/" + plante.billede;
+        document.querySelector(".beskrivelse").textContent = plante.beskrivelse;
+      }
 
-        //
-        function tilbageTilGalleri (){
-            history.back(); //brug history web API’et til at komme et hak baglæns i browserhistorien og dermed komme tilbage til planter.html
-        };
-
-
-
+      //
+      function tilbageTilGalleri() {
+        history.back(); //brug history web API’et til at komme et hak baglæns i browserhistorien og dermed komme tilbage til planter.html
+      }
     </script>
-    
-</body>
+  </body>
 </html>
