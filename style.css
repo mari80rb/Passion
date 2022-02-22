@@ -199,10 +199,3 @@ a {
   color: black;
   font-size: 12px;
 }
-
-/* Logo placering */
-
-.logo {
-  display: flex;
-  width: 10%;
-}
