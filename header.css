@@ -4,10 +4,6 @@
   background-size: cover;
 }
 
-.navn {
-  color: #8c4949;
-}
-
 .navbar ul {
   display: flex;
 }
@@ -47,6 +43,7 @@
   margin-left: auto;
   margin-right: auto;
   font-size: 2rem;
+  color: #8c4949;
 }
 
 .navbar li .logo {
