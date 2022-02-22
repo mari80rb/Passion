@@ -24,7 +24,7 @@
     <title>Planter</title>
 
     <style>
-      button {
+      .tilbage {
         font-size: 1rem;
         background-color: white;
         margin: 0.1%;
@@ -38,10 +38,17 @@
         transition-duration: 0.3s;
       }
 
-      button:hover {
+      .tilbage:hover {
         border: 2px solid #8c4949;
         background-color: #8c4949;
         color: white;
+      }
+      @media (min-width: 700px) {
+        .sammen {
+          display: grid;
+          grid-template-columns: 5fr 4fr;
+          gap: 5%;
+        }
       }
     </style>
   </head>
@@ -85,8 +92,10 @@
 
       <article class="plante">
         <h2></h2>
-        <img src="" alt="" />
-        <p class="beskrivelse"></p>
+        <div class="sammen">
+          <img src="" alt="" />
+          <p class="beskrivelse"></p>
+        </div>
       </article>
     </main>
 
