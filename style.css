@@ -159,8 +159,6 @@ button:hover {
     margin-inline-end: 30%;
   }
   /******* FORSIDE CSS ********/
-
-  /* Placering af infotekst og img på forsiden*/
   .info {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -177,15 +175,14 @@ button:hover {
 }
 
 .splashimage {
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
-/**************** Footer ***************/
 footer {
   width: 100%;
   background: #bf8484;
 }
-/* Placering af tekst i footer*/
+
 footer .content {
   max-width: 135px;
   margin: 30px;
@@ -193,13 +190,9 @@ footer .content {
   display: flex;
   flex-wrap: wrap;
 }
-/* Farve og størrelse på indhold/p i footer*/
+
 footer .content p,
-a {
+footer a {
   color: white;
   font-size: 12px;
-}
-
-.topic {
-  color: white;
 }
