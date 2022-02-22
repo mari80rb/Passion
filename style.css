@@ -164,18 +164,11 @@ button:hover {
   }
 }
 
-@media (min-width: 900px) {
-  .test {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-  }
-}
-
 .splashimage {
   margin-bottom: 80px;
 }
 
+/******************** FOOTER *****************/
 footer {
   width: 100%;
   background: #bf8484;
@@ -196,7 +189,7 @@ footer a {
   font-size: 12px;
 }
 
-/*********** " FIND DIN PLANTE HER " splash billede samt overskrift ***********/
+/*********** CSS på " FIND DIN PLANTE HER " splash billede samt overskrift ***********/
 .container {
   display: grid;
 }
@@ -208,6 +201,7 @@ h1 {
 
 .splash2 {
   object-fit: cover;
+  margin-bottom: 50px;
 }
 
 h1 {
@@ -220,21 +214,21 @@ h1 {
 
 /*************** MOBIL *************/
 @media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 30px;
-    }
+  h1 {
+    font-size: 30px;
+  }
 }
 
 /*************** TABLET *************/
 @media only screen and (min-width: 600px) {
-    h1 {
-        font-size: 50px;
-    }
+  h1 {
+    font-size: 50px;
+  }
 }
 
 /************** WEB *****************/
-@media only screen and (min-width: 990px) {
-    h1 {
-        font-size: 80px;
-    }
+@media only screen and (min-width: 900px) {
+  h1 {
+    font-size: 80px;
+  }
 }
