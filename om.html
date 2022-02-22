@@ -24,6 +24,31 @@
     <link rel="stylesheet" href="header.css" />
 
     <title>Om Os</title>
+
+    <style>
+
+
+      /*.kontakt {
+        background-color:  rgba(138,191,172, 0.3);
+        margin: 0%;
+        padding: 3%;
+      }*/
+
+      #tekst {
+
+        background-color:  rgba(138,191,172, 0.3);
+        margin: 0%;
+        padding: 3%;
+
+      }
+
+      #om {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5%;
+      }
+
+    </style>
   </head>
   <body>
     <header>
@@ -60,9 +85,58 @@
       </nav>
     </header>
 
-    <main></main>
+    <main>
 
-    <footer></footer>
+      <section id="tekst">
+        <div>
+          <p>
+           Har du nogle tanker du vil dele med os, eller har du måske brug for hjælp til noget helt specifikt? Så er POT-it 
+            din redning. <br>
+            På denne side finder du vores kontaktoplysninger, hvor vi står klar til at høre fra dig. Har du brug for en smule vejledning?
+            Så tøv ikke med at ringe til os! Eller har du måske noget feedback til os? Så hører vi gerne fra dig på vores mail. 
+            Måske vil du gerne forbi os og se vores plantesamling? Så kom gerne forbi! <br>
+            
+
+          </p>
+        </div>
+      </section>
+
+      <section id="om">
+
+        <div class="map">
+          <h2> FIND VEJ </h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.8495458972384!2d12.552505651481962!3d55.691603480441444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253abae55267d%3A0x7f06e00bd751130a!2sKEA%20Copenhagen%20School%20of%20Design%20and%20Technology%20-%20Main%20Campus!5e0!3m2!1sen!2sdk!4v1645552319140!5m2!1sen!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </div>
+
+
+        <div class="kontakt">
+
+          <h2>Kontakt</h2>
+
+          <p>
+            Mobil: +45 22 22 22 22 <br>
+            Mail: passion@pot-it.dk <br>
+            Adresse: Guldbergsgade 29N, 2200 København
+          </p>
+
+        </div>
+
+
+      </section>
+
+
+    </main>
+
+    <footer>
+      <div class="content">
+      <div class="topic">Kontakt</div>
+      <p>
+          Mobil: 0045 22 22 22 22 <br>
+          Mail: passion@pot-it.dk
+      </p>
+      </div>
+    </footer>
 
     <script src="passion.js"></script>
   </body>
