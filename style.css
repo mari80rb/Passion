@@ -151,18 +151,7 @@ button:hover {
 }
 /********** GRID SLUT **********/
 
-section {
-  display: grid;
-}
 
-.splashimage,
-h1 {
-  grid-area: 1 / 1;
-}
-
-.splashimage {
-  object-fit: cover;
-}
 @media (min-width: 500px) {
   nav ul {
     flex-flow: row;
@@ -185,3 +174,28 @@ h1 {
     gap: 10px;
   }
 }
+
+.splashimage {
+  margin-bottom: 80px;
+}
+
+footer {
+  width: 100%;
+  background: #bf8484;
+}
+
+footer .content {
+  max-width: 135px;
+  margin: 30px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .content p,
+a {
+  color: black;
+  font-size: 12px;
+}
+
+
