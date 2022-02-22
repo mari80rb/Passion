@@ -56,5 +56,13 @@
   display: flex;
   justify-content: right;
   margin-left: auto;
-  margin-right: 20%;
+  margin-right: 30%;
+}
+
+.navbar li .toggle-btn {
+  display: flex;
+  justify-content: left;
+  margin-right: auto;
+  margin-left: 20%;
+  padding-left: 3%;
 }
