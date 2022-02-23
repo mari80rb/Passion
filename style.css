@@ -76,6 +76,10 @@ a {
   color: #8c4949;
   font-size: 1.2rem;
 }
+a h4:hover {
+  text-decoration: none;
+  color: #552525;
+}
 
 a:hover {
   text-decoration: none;
@@ -323,5 +327,10 @@ label p,
     margin-top: 0%;
     margin-right: 5%;
     margin-bottom: 50%;
+  }
+  .test {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
   }
 }
