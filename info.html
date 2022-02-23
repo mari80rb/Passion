@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="header.css" />
 
-    <title>Info</title>
+    <title>Login</title>
   </head>
   <body>
     <header>
@@ -59,7 +59,82 @@
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <h1 class="login_h1">Min Profil</h1>
+
+      <section id="login">
+        <div class="billede_tekst">
+          <img
+            src="billeder/login.jpg"
+            alt="Hylde med planter"
+            class="login_billede"
+          />
+          <p class="login_tekst">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem quidem
+            iste magnam impedit perspiciatis recusandae repellat eius quam totam
+            minus nemo earum magni aspernatur modi, veritatis rerum! Voluptatem
+            magni autem distinctio fugit deleniti quae et recusandae, in
+            molestias voluptatibus architecto voluptate eum nulla ullam. Error
+            quidem explicabo vel neque eaque.
+          </p>
+        </div>
+        <div class="tilmeld">
+          <h2>Tilmeld dig</h2>
+          <div class="login_info">
+            <div class="fornavn">
+              <label for="Fornavn"
+                ><p>Fornavn</p>
+
+                <input placeholder="Nogen" type="text" name="fnavn" required />
+              </label>
+            </div>
+            <div class="efternavn">
+              <label for="Efternavn"
+                ><p>Efternavn</p>
+
+                <input
+                  placeholder="Nogensen"
+                  type="text"
+                  name="enavn"
+                  required
+                />
+              </label>
+            </div>
+            <div class="mail">
+              <label for="E-mail">
+                <p>E-mail</p>
+
+                <input
+                  placeholder="nogen@gmail.com"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </label>
+            </div>
+            <div class="kodeord">
+              <label for="Kodeord">
+                <p>Kodeord</p>
+
+                <input
+                  placeholder="min 8 tegn"
+                  type="password"
+                  name="password"
+                  id="password"
+                  required
+                />
+              </label>
+            </div>
+          </div>
+
+          <button class="bekraeft_knap">BEKRÆFT</button>
+          <div class="bruger">
+            <p>Allerede bruger? Login her</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer></footer>
 
