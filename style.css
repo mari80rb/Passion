@@ -18,10 +18,12 @@ h1 {
 h2,
 h3 {
   font-family: "Dosis", sans-serif;
+  color: #552525;
 }
 
 p {
   font-family: "Poppins", sans-serif;
+  color: #8c4949;
 }
 
 ul {
@@ -161,6 +163,10 @@ button:hover {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+  }
+
+  .mand-planter {
+    margin-top: 20%;
   }
 }
 
