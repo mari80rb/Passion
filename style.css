@@ -36,6 +36,9 @@ button {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
+.cursor .plante {
+  cursor: pointer;
+}
 
 /************* BURGER MENU ********************/
 
