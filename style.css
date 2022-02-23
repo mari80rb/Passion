@@ -303,6 +303,11 @@ input {
 .login_tekst {
   margin-bottom: 10%;
 }
+label p,
+.tilmeld h2,
+.tilmeld p {
+  color: white;
+}
 
 @media (min-width: 900px) {
   #login {
