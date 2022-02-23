@@ -1,0 +1,36 @@
+footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+footer .container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 2%;
+}
+
+footer ul {
+  list-style: none;
+  color: grey;
+}
+
+.footer-col {
+  width: 100%;
+}
+
+.footer-col h4 {
+  color: white;
+  margin-left: 1.5rem;
+}
+
+footer a {
+  font-size: 1rem;
+}
+
+@media (min-width: 700px) {
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
