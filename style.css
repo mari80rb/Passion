@@ -232,3 +232,83 @@ h1 {
     font-size: 80px;
   }
 }
+
+/*********** LOGIN SIDE **********/
+.tilmeld {
+  background-color: #bf8484;
+  padding: 7%;
+  border-radius: 2rem;
+  color: white;
+}
+
+label,
+input,
+textarea,
+select,
+label p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  color: #552525;
+  padding: 4%;
+  padding-inline: 20%;
+  margin-bottom: 12%;
+  border-radius: 2rem;
+}
+
+.bruger,
+.tilmeld h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.bruger {
+  font-size: smaller;
+}
+
+.bekraeft_knap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3%;
+  margin-top: 10%;
+  padding-inline: 20%;
+  border-color: white;
+}
+
+.login_billede {
+  border-radius: 0.5rem;
+}
+
+.bekraeft_knap:hover {
+  background-color: #8c4949;
+}
+
+.login_h1 {
+  margin-left: 1rem;
+  font-size: 3rem;
+  color: #8c4949;
+}
+
+.login_tekst {
+  margin-bottom: 10%;
+}
+
+@media (min-width: 900px) {
+  #login {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+  }
+  input {
+    padding-inline: 20%;
+  }
+
+  .billede_tekst {
+    margin-top: 0%;
+    margin-right: 5%;
+    margin-bottom: 50%;
+  }
+}
