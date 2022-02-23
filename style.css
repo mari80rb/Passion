@@ -276,7 +276,8 @@ input {
   padding: 3%;
   margin-top: 10%;
   padding-inline: 20%;
-  border-color: white;
+  border-color: #8c4949;
+  background-color: white;
 }
 
 .login_billede {
