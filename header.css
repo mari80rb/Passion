@@ -8,12 +8,6 @@
   display: flex;
 }
 
-@media (min-width: 900px) {
-  .logo {
-    width: 30%;
-  }
-}
-
 /*.navbar button {
   float: left;
   margin-top: auto;
@@ -46,8 +40,11 @@
 }
 
 .navbar li .pot {
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto;*/
+  position: absolute;
+  top: 4.7%;
+  left: 42%;
   font-size: 2rem;
   color: #8c4949;
 }
@@ -63,5 +60,50 @@
   display: flex;
   justify-content: left;
   margin-right: auto;
-  margin-left: 25%;
+  margin-left: 15%;
+}
+@media (min-width: 600px) {
+  .logo {
+    width: 40%;
+  }
+
+  .navbar li .toggle-btn {
+    margin-left: 20%;
+  }
+
+  .navbar li .pot {
+    position: absolute;
+    top: 5%;
+    left: 46%;
+  }
+}
+
+@media (min-width: 900px) {
+  .logo {
+    width: 30%;
+  }
+
+  .navbar li .pot {
+    position: absolute;
+    top: 6.5%;
+    left: 46%;
+  }
+
+  .navbar li .toggle-btn {
+    margin-left: 28%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .navbar li .pot {
+    position: absolute;
+    top: 6.5%;
+    left: 47%;
+    font-size: 3rem;
+  }
+
+  .navbar li .toggle-btn {
+    margin-left: 32%;
+    font-size: 3rem;
+  }
 }

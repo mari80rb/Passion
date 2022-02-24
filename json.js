@@ -53,13 +53,14 @@ function filtrerPlanter(){
   header.textContent = this.textContent;
 }
 
+//Her hentes json data ind og sendes videre til funktionen vis()
 async function hentdata() {
   const respons = await fetch(url, options);//Lav variabel "respons" hvor der await fetches, (starter/venter på en request som returner et promise), hvor vi i dette tilfælde venter på vores url const og options const
   planter = await respons.json();//variablen "planter" sættes lig med respons consten som vi awaiter, så den henter alt json fra databasen
   vis();//Kald derefter funktionen vis()
 }
 
-
+//vis() sætter hver enkelt plante ind i HTML
 function vis(){
   console.log("Planter", planter)//vis nu "planter" i konsollen
   const container = document.querySelector("section");
@@ -93,7 +94,7 @@ function vis(){
 
 }
 
-//Vi laver function som viser detaljer fra det element (img) man har klikket på, i en ny side.
+//Når der klikkes på en plante vises denne på en seperat side
 function visDetaljer (hvad) {
 
     //location.href bruges til at vise ny html side når man klikker på "img". Her bruger vi "id" fra databasen. Man ser dermed "id" oppe i URL'en.
