@@ -36,7 +36,7 @@ button {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-.cursor .plante {
+.plante .img_cursor {
   cursor: pointer;
 }
 
@@ -78,7 +78,7 @@ nav ul {
 a {
   text-decoration: none;
   color: #8c4949;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 a h4:hover {
   text-decoration: none;
