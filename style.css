@@ -156,7 +156,7 @@ button:hover {
 .test {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
+  gap: 1%;
 }
 /********** GRID SLUT **********/
 
@@ -335,6 +335,6 @@ label p,
   .test {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 2%;
   }
 }
