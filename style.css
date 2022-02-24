@@ -67,6 +67,7 @@ nav.shown {
   display: flex;
   flex: 1 1 100%;
   flex-flow: column;
+  margin-left: 4.5%;
 }
 
 nav ul {
